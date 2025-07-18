@@ -24,12 +24,12 @@ public class HelloController {
 
     @FXML
     protected void onGenere(ActionEvent event) {
-        abrirVentana("Genere.fxml", "Género", event);
+        abrirVentana("genero.fxml", "Género", event);
     }
 
     @FXML
     protected void onYear(ActionEvent event) {
-        abrirVentana("Year.fxml", "Año", event);
+        abrirVentana("Anio.fxml", "Año", event);
     }
 
     private void abrirVentana(String fxml, String titulo, ActionEvent event) {

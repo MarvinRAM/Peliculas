@@ -1,0 +1,38 @@
+/* Fondo oscuro y estilo del VBox */
+.vbox {
+    -fx-background-color: #1e1e1e;
+    -fx-padding: 20;
+    -fx-spacing: 15;
+}
+
+/* Botón con estilo "terminal moderno" */
+.button {
+    -fx-background-color: #00b894;
+    -fx-text-fill: #1e1e1e;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16 8 16;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.4), 5, 0, 0, 2);
+    -fx-border-color: #00cec9;
+    -fx-border-width: 1;
+}
+
+/* Hover del botón */
+.button:hover {
+    -fx-background-color: #00cec9;
+    -fx-text-fill: #1e1e1e;
+}
+
+/* Área de texto tipo consola */
+.text-area {
+    -fx-control-inner-background: #2d3436;
+    -fx-text-fill: #dfe6e9;
+    -fx-font-family: "Consolas", "Courier New", monospace;
+    -fx-font-size: 13px;
+    -fx-background-radius: 8;
+    -fx-border-color: #636e72;
+    -fx-border-width: 1;
+    -fx-padding: 8;
+}

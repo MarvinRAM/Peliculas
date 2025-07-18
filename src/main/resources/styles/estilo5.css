@@ -1,0 +1,40 @@
+/* Fondo blanco plano */
+.vbox {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+    -fx-spacing: 10;
+}
+
+/* Botón azul plano, texto blanco */
+.button {
+    -fx-background-color: #007acc;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20 10 20;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+}
+
+/* Hover simple */
+.button:hover {
+    -fx-background-color: #005a9e;
+}
+
+/* Presionado */
+.button:pressed {
+    -fx-background-color: #003f6b;
+}
+
+/* TextArea con borde gris y texto negro */
+.text-area {
+    -fx-control-inner-background: #f9f9f9;
+    -fx-text-fill: #000000;
+    -fx-font-family: "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-radius: 3;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1;
+    -fx-padding: 8;
+}

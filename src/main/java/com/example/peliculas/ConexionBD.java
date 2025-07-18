@@ -8,7 +8,7 @@ public class ConexionBD {
     private static final String DB_URL =
             "jdbc:oracle:thin:@s2k0s51zfpky302k_high?TNS_ADMIN=/Users/fabianmartinez/Downloads/Wallet_S2K0S51ZFPKY302K";
     private static final String DB_USER = "ADMIN";
-    private static final String DB_PASSWORD = "Marvin212006";
+    private static final String DB_PASSWORD = "Marvin212006-";
 
     public static Connection getConnection() throws SQLException {
         Properties props = new Properties();
@@ -55,3 +55,4 @@ public class ConexionBD {
         }).start();
     }
 }
+

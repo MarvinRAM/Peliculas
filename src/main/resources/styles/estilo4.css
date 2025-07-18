@@ -1,0 +1,47 @@
+/* Fondo blanco neutro para el VBox */
+.vbox {
+    -fx-background-color: #ffffff;
+    -fx-padding: 25;
+    -fx-spacing: 15;
+    -fx-border-radius: 8;
+}
+
+/* Botón estilo Material Design */
+.button {
+    -fx-background-color: #6200ee;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-padding: 12 30 12 30;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(98,0,238,0.4), 8, 0, 0, 4);
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-transition: background-color 0.2s ease-in-out;
+}
+
+/* Hover */
+.button:hover {
+    -fx-background-color: #3700b3;
+    -fx-effect: dropshadow(gaussian, rgba(55,0,179,0.6), 10, 0, 0, 6);
+}
+
+/* Pressed (simula ripple con sombra más intensa) */
+.button:pressed {
+    -fx-background-color: #30009c;
+    -fx-effect: dropshadow(gaussian, rgba(48,0,156,0.8), 12, 0, 0, 8);
+}
+
+/* TextArea limpio y minimalista */
+.text-area {
+    -fx-control-inner-background: #f9f9f9;
+    -fx-text-fill: #212121;
+    -fx-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-radius: 6;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.05), 2, 0, 0, 1);
+}
