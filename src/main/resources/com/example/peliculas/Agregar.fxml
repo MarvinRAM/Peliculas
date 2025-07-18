@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-padding: 20;" stylesheets="@../../../styles/estilo2.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.peliculas.Agregar">
+
+    <VBox layoutX="150.0" layoutY="50.0" spacing="10">
+
+        <TextField fx:id="idField" promptText="ID Película" />
+        <TextField fx:id="nombreField" promptText="Nombre" />
+        <TextField fx:id="generoField" promptText="Género" />
+        <TextField fx:id="anioField" promptText="Año" />
+
+        <Button fx:id="guardarButton" onAction="#guardarPelicula" text="Guardar Película" />
+
+    </VBox>
+</AnchorPane>

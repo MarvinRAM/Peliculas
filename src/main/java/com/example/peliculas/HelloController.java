@@ -13,8 +13,8 @@ import java.io.IOException;
 public class HelloController {
 
     @FXML
-    protected void onID(ActionEvent event) {
-        abrirVentana("ID.fxml", "ID", event);
+    protected void onAgregar(ActionEvent event) {
+        abrirVentana("Agregar.fxml", "Agregar", event);
     }
 
     @FXML
@@ -23,13 +23,13 @@ public class HelloController {
     }
 
     @FXML
-    protected void onGenere(ActionEvent event) {
-        abrirVentana("genero.fxml", "Género", event);
+    protected void onEliminar(ActionEvent event) {
+        abrirVentana("Eliminar.fxml", "Género", event);
     }
 
     @FXML
-    protected void onYear(ActionEvent event) {
-        abrirVentana("Anio.fxml", "Año", event);
+    protected void onModificar(ActionEvent event) {
+        abrirVentana("Modificar.fxml", "Año", event);
     }
 
     private void abrirVentana(String fxml, String titulo, ActionEvent event) {

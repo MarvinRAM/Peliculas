@@ -10,6 +10,7 @@ public class ConexionBD {
     private static final String DB_USER = "ADMIN";
     private static final String DB_PASSWORD = "Marvin212006-";
 
+    // Método para obtener la conexión a la base de datos
     public static Connection getConnection() throws SQLException {
         Properties props = new Properties();
         props.setProperty("user", DB_USER);
@@ -20,20 +21,34 @@ public class ConexionBD {
         return DriverManager.getConnection(DB_URL, props);
     }
 
-    public static void consultarID(Consumer<String> callback) {
-        ejecutarConsulta("SELECT ID_PELICULA FROM PELICULAS", "ID_PELICULA", callback);
-    }
+    // Método principal que consulta todos los datos de las películas
+    public static void consultarPeliculas(Consumer<String> callback) {
+        String sql = "SELECT ID_PELICULA, NOMBRE, GENERO, ANIO FROM PELICULAS";
+        new Thread(() -> {
+            StringBuilder sb = new StringBuilder();
+            try (Connection conn = getConnection();
+                 Statement stmt = conn.createStatement();
+                 ResultSet rs = stmt.executeQuery(sql)) {
 
-    public static void consultarNombres(Consumer<String> callback) {
-        ejecutarConsulta("SELECT NOMBRE FROM PELICULAS", "NOMBRE", callback);
-    }
+                while (rs.next()) {
+                    int id = rs.getInt("ID_PELICULA");
+                    String nombre = rs.getString("NOMBRE");
+                    String genero = rs.getString("GENERO");
+                    int anio = rs.getInt("ANIO");
 
-    public static void consultarGenero(Consumer<String> callback) {
-        ejecutarConsulta("SELECT GENERO FROM PELICULAS", "GENERO", callback);
-    }
+                    sb.append("ID: ").append(id)
+                            .append(" | Nombre: ").append(nombre)
+                            .append(" | Género: ").append(genero)
+                            .append(" | Año: ").append(anio)
+                            .append("\n");
+                }
+                callback.accept(sb.toString());
 
-    public static void consultarAnio(Consumer<String> callback) {
-        ejecutarConsulta("SELECT ANIO FROM PELICULAS", "ANIO", callback);
+            } catch (SQLException e) {
+                e.printStackTrace();
+                callback.accept("Error: " + e.getMessage());
+            }
+        }).start();
     }
 
     private static void ejecutarConsulta(String sql, String columna, Consumer<String> callback) {
@@ -55,4 +70,5 @@ public class ConexionBD {
         }).start();
     }
 }
+
 

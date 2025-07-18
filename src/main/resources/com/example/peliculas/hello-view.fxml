@@ -10,8 +10,8 @@
     </padding>
 
     <Label fx:id="welcomeText" text="Consulta la informacion de tu base datos:" />
-    <Button fx:id="btnID" onAction="#onID" prefHeight="26.0" prefWidth="120.0" text="ID Peliculas" />
+    <Button fx:id="btnID" onAction="#onAgregar" prefHeight="26.0" prefWidth="120.0" text="Agregar" />
    <Button fx:id="btnName" mnemonicParsing="false" onAction="#onName" prefWidth="120.0" text="Nombre Peliculas" />
-   <Button fx:id="btnGenere" mnemonicParsing="false" onAction="#onGenere" prefWidth="120.0" text="Genero Peliculas" />
-   <Button fx:id="btnYear" mnemonicParsing="false" onAction="#onYear" prefWidth="120.0" text="Anio Peliculas" />
+   <Button fx:id="btnGenere" mnemonicParsing="false" onAction="#onModificar" prefWidth="120.0" text="Modificar" />
+   <Button fx:id="btnYear" mnemonicParsing="false" onAction="#onEliminar" prefWidth="120.0" text="Elimiar" />
 </VBox>
